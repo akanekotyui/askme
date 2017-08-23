@@ -53,6 +53,7 @@ class QuestionPartTwosController < ApplicationController
     @question_part_two.destroy
     respond_to do |format|
       format.html { redirect_to question_part_twos_url, notice: 'Question part two was successfully destroyed.' }
+      format.json { head :no_content }
     end
   end
 
