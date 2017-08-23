@@ -1,28 +1,20 @@
 class QuestionPartTwosController < ApplicationController
   before_action :set_question_part_two, only: [:show, :edit, :update, :destroy]
 
-  # GET /question_part_twos
-  # GET /question_part_twos.json
   def index
     @question_part_twos = QuestionPartTwo.all
   end
 
-  # GET /question_part_twos/1
-  # GET /question_part_twos/1.json
   def show
   end
 
-  # GET /question_part_twos/new
   def new
     @question_part_two = QuestionPartTwo.new
   end
 
-  # GET /question_part_twos/1/edit
   def edit
   end
 
-  # POST /question_part_twos
-  # POST /question_part_twos.json
   def create
     @question_part_two = QuestionPartTwo.new(question_part_two_params)
 
@@ -35,8 +27,6 @@ class QuestionPartTwosController < ApplicationController
     end
   end
 
-  # PATCH/PUT /question_part_twos/1
-  # PATCH/PUT /question_part_twos/1.json
   def update
     respond_to do |format|
       if @question_part_two.update(question_part_two_params)
@@ -47,8 +37,6 @@ class QuestionPartTwosController < ApplicationController
     end
   end
 
-  # DELETE /question_part_twos/1
-  # DELETE /question_part_twos/1.json
   def destroy
     @question_part_two.destroy
     respond_to do |format|
@@ -65,6 +53,6 @@ class QuestionPartTwosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def question_part_two_params
-      params.require(:question_part_two).permit(:en, :jp, :zh)
+      params.require(:question_part_two).permit(:en, :jp, :zh, :code, :remark, :a_code)
     end
 end
