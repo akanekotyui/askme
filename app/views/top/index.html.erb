@@ -1,1 +1,63 @@
-<h1>test</h1>
+<nav class="navbar navbar-default">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#gnavi">
+      <span class="sr-only">メニュー</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+  </div>
+  
+  <div id="gnavi" class="collapse navbar-collapse">
+    <ul class="nav navbar-nav">
+      <%= link_to "infomation", infomation_index_path %>
+      <%= link_to "reply(test)", reply_index_path %>
+    </ul>
+  </div>
+</nav>
+
+
+    <h1>あすくみい</h1>
+    <ul>
+      please select your question!
+    </ul>
+
+    <div  class="container">
+
+      <!-- 質問文のタブ -->
+		<section>
+			<h1>Tabs</h1>
+			<div>
+				<ul class="nav nav-tabs" role="tablist">
+					<li role="presentation" class="active"><a href="#how" aria-controls="how" role="tab" data-toggle="tag">How</a></li>
+					<li role="presentation"><a href="#htgt" aria-controls="htgt" role="tab" data-toggle="tab">How to go to ...</a></li>
+					<li role="presentation"><a href="#hltt" aria-controls="hltt" role="tab" data-toggle="tab">How long to take ...</a></li>
+					<li role="presentation"><a href="#what" aria-controls="what" role="tab" data-toggle="tab">What</a></li>
+					<li role="presentation"><a href="#wn" aria-controls="wn" role="tab" data-toggle="tab">What number...</a></li>
+					<li role="presentation"><a href="#wt" aria-controls="wt" role="tab" data-toggle="tab">What time ...</a></li>
+				</ul>
+
+				<div class="tab-content">
+					<div role="tabpanel" class="tab-pane active" id="how">
+						<p> how </p>
+					</div>
+					<div role="tabpanel" class="tab-pane" id="htgt">
+						<p> how to go to</p>
+					</div>
+					<div role="tabpanel" class="tab-pane" id="hltt">
+						<p> how long to take</p>
+					</div>
+					<div role="tabpanel" class="tab-pane" id="what">
+						<p> what </p>
+					</div>
+					<div role="tabpanel" class="tab-pane" id="wn">
+						<p> what number </p>
+					</div>
+					<div role="tabpanel" class="tab-pane" id="wt">
+						<p> what time </p>
+					</div>
+
+				</div>
+			</div>
+		</section>
+	</div>
