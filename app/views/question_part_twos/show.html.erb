@@ -1,6 +1,11 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+<strong><%= QuestionPartTwo.human_attribute_name(:code) %></strong>
+<%= @question_part_two.code %>
+</p>
+
+<p>
 <strong><%= QuestionPartTwo.human_attribute_name(:en) %></strong>
 <%= @question_part_two.en %>
 </p>
@@ -14,5 +19,16 @@
 <strong><%= QuestionPartOne.human_attribute_name(:zh) %></strong>
 <%= @question_part_two.zh %>
 </p>
+
+<p>
+<strong><%= QuestionPartTwo.human_attribute_name(:remark) %></strong>
+<%= @question_part_two.remark %>
+</p>
+
+<p>
+<strong><%= QuestionPartTwo.human_attribute_name(:a_code) %></strong>
+<%= @question_part_two.a_code %>
+</p>
+
 <%= link_to 'Edit', edit_question_part_two_path(@question_part_two) %> |
 <%= link_to 'Back', question_part_twos_path %>
