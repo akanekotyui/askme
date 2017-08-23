@@ -11,6 +11,22 @@
     </div>
   <% end %>
 
+  <div class="field">
+  <%= form.label :en %>
+  <%= form.text_field :en, id: :question_part_two_en %>
+</div>
+
+<div class="field">
+  <%= form.label :jp %>
+  <%= form.text_field :jp, id: :question_part_two_jp %>
+</div>
+
+<div class="field">
+  <%= form.label :zh %>
+  <%= form.text_field :zh, id: :question_part_two_zh %>
+</div>
+
+
   <div class="actions">
     <%= form.submit %>
   </div>
