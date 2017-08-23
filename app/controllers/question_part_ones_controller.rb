@@ -53,6 +53,6 @@ class QuestionPartOnesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def question_part_one_params
-      params.require(:question_part_one).permit(:en, :jp, :zh)
+      params.require(:question_part_one).permit(:en, :jp, :zh, :q2_code, :remark)
     end
 end

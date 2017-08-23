@@ -15,5 +15,15 @@
   <%= @question_part_one.zh %>
 </p>
 
+<p>
+  <strong><%= QuestionPartOne.human_attribute_name(:remark) %></strong>
+  <%= @question_part_one.remark %>
+</p>
+
+<p>
+  <strong><%= QuestionPartOne.human_attribute_name(:q2_code) %></strong>
+  <%= @question_part_one.q2_code %>
+</p>
+
 <%= link_to 'Edit', edit_question_part_one_path(@question_part_one) %> |
 <%= link_to 'Back', question_part_ones_path %>

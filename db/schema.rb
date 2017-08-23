@@ -16,14 +16,19 @@ ActiveRecord::Schema.define(version: 1) do
     t.string "en"
     t.string "jp"
     t.string "zh"
+    t.integer "q2_code"
+    t.string "remark"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "question_part_twos", force: :cascade do |t|
+    t.integer "code"
     t.string "en"
     t.string "jp"
     t.string "zh"
+    t.integer "a_code"
+    t.string "remark"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
