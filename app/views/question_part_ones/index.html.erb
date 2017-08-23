@@ -5,6 +5,9 @@
 <table>
   <thead>
     <tr>
+      <th><%= QuestionPartOne.human_attribute_name(:en) %></th>
+      <th><%= QuestionPartOne.human_attribute_name(:jp) %></th>
+      <th><%= QuestionPartOne.human_attribute_name(:zh) %></th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -12,6 +15,9 @@
   <tbody>
     <% @question_part_ones.each do |question_part_one| %>
       <tr>
+        <td><%= question_part_one.en %></td>
+        <td><%= question_part_one.jp %></td>
+        <td><%= question_part_one.zh %></td>
         <td><%= link_to 'Show', question_part_one %></td>
         <td><%= link_to 'Edit', edit_question_part_one_path(question_part_one) %></td>
         <td><%= link_to 'Destroy', question_part_one, method: :delete, data: { confirm: 'Are you sure?' } %></td>
