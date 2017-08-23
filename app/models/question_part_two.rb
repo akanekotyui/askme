@@ -1,0 +1,2 @@
+class QuestionPartTwo < ApplicationRecord
+end
