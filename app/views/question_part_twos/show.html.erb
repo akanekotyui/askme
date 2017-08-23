@@ -1,4 +1,18 @@
 <p id="notice"><%= notice %></p>
 
+<p>
+<strong><%= QuestionPartTwo.human_attribute_name(:en) %></strong>
+<%= @question_part_two.en %>
+</p>
+
+<p>
+<strong><%= QuestionPartTwo.human_attribute_name(:jp) %></strong>
+<%= @question_part_two.jp %>
+</p>
+
+<p>
+<strong><%= QuestionPartOne.human_attribute_name(:zh) %></strong>
+<%= @question_part_two.zh %>
+</p>
 <%= link_to 'Edit', edit_question_part_two_path(@question_part_two) %> |
 <%= link_to 'Back', question_part_twos_path %>

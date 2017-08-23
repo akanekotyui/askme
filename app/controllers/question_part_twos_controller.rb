@@ -29,10 +29,8 @@ class QuestionPartTwosController < ApplicationController
     respond_to do |format|
       if @question_part_two.save
         format.html { redirect_to @question_part_two, notice: 'Question part two was successfully created.' }
-        format.json { render :show, status: :created, location: @question_part_two }
       else
         format.html { render :new }
-        format.json { render json: @question_part_two.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -43,10 +41,8 @@ class QuestionPartTwosController < ApplicationController
     respond_to do |format|
       if @question_part_two.update(question_part_two_params)
         format.html { redirect_to @question_part_two, notice: 'Question part two was successfully updated.' }
-        format.json { render :show, status: :ok, location: @question_part_two }
       else
         format.html { render :edit }
-        format.json { render json: @question_part_two.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -69,6 +65,6 @@ class QuestionPartTwosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def question_part_two_params
-      params.fetch(:question_part_two, {})
+      params.require(:question_part_two).permit(:en, :jp, :zh)
     end
 end
