@@ -16,12 +16,12 @@
 
   <body>
     <nav class="navbar navbar-default">
-      <div class="navbar-header">
+      <div class="navbar-header custom_header">
         <div class="navbar-toggle" style="padding:5px;float:left;margin-left:15px !important">
-          <%= link_to "<i class='fa fa-home fa-2x' aria-hidden='true'></i>".html_safe, root_path, color:"#4571b7" %>
+          <%= link_to "<i class='fa fa-home fa-2x' aria-hidden='true'></i>".html_safe, root_path, style:"color:#1e50a2;" %>
         </div>
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#gnavi" style="padding:5px !important">
-          <span style="color:#4571b7"><i class="fa fa-bars fa-2x" aria-hidden="true"></i></span>
+          <span style="color:#1e50a2"><i class="fa fa-bars fa-2x" aria-hidden="true"></i></span>
         </button>
       </div>
 
@@ -32,7 +32,7 @@
         </ul>
       </div>
     </nav>
-    <div class="container">
+    <div class="container custom_content">
       <%= yield %>
     </div>
   </body>
