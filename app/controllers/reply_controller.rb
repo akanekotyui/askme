@@ -1,8 +1,9 @@
 class ReplyController < ApplicationController
   def reply_index
-    #これは文字列直打ち
-    @reply = 'how to get to' + 'Kinkakuji-temple'
-    @answer = '*goto行きの	（～系統）で乗って、（～方面）へ行き、（降りるべき駅）で降りてください。'
+#firstはDBの一番上のデータをもってくるメソッド
+#入力からparamで値を渡す
+@reply = QuestionPartOne.first.en + QuestionPartOne.first.remark + QuestionPartTwo.first.en
+@answer = Answer.first.jp
 
   end
 
