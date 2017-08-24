@@ -1,34 +1,45 @@
-</nav>
+<div align="center">
+  <font face="HG行書体" size="6">Welcome to </font>
+  <font face="HG行書体" size="6">Kyoto!</font>
 
+  <p>
+    <%= image_tag 'askme.png', :size => '200x130'%>
+  </p>
 
-    <h1>あすくみい</h1>
-    <ul>
-      please select your question!
+  <font face="HG行書体" size="4">Communication tool</font>
+  <br/>
+</div>
+
+<br/>
+<br/>
+
+<font face="Script" size="4">Please select your question!</font><br />
+<section>
+  <div>
+    <ul class="nav nav-tabs" role="tablist">
+      <li role="presentation" class="active ">
+        <a href="#place" class="custom_content" aria-controls="place" role="tab" data-toggle="tab">place</a>
+      </li>
+      <li role="presentation">
+        <a href="#problems" class="custom_content" aria-controls="problems" role="tab" data-toggle="tab">problems</a>
+      </li>
+      <li role="presentation">
+        <a href="#others" class="custom_content" aria-controls="others" role="tab" data-toggle="tab">others</a>
+      </li>
     </ul>
 
-    <div  class="container">
-
-      <!-- 質問文のタブ -->
-		<section>
-			<h1>Tabs</h1>
-			<div>
-				<ul class="nav nav-tabs" role="tablist">
-					<li role="presentation" class="active"><a href="#place" aria-controls="place" role="tab" data-toggle="tag">Place...</a></li>
-					<li role="presentation"><a href="#problems" aria-controls="problems" role="tab" data-toggle="tab">Problems ...</a></li>
-					<li role="presentation"><a href="#others" aria-controls="others" role="tab" data-toggle="tab">Others ...</a></li>
-				</ul>
-
-				<div class="tab-content">
-					<div role="tabpanel" class="tab-pane active" id="place">
-						<p> Place... </p>
-					</div>
-					<div role="tabpanel" class="tab-pane" id="problems">
-						<p> Problems</p>
-					</div>
-					<div role="tabpanel" class="tab-pane" id="others">
-						<p> Others</p>
-					</div>
-				</div>
-			</div>
-		</section>
-	</div>
+    <div class="tab-content" align="center">
+      <% [:place, :problems, :others].each do |tab| %>
+        <div role="tabpanel" class="tab-pane <%= 'active' if tab == :place %>" id="<%= tab %>">
+  	  <% @q1s = QuestionPartOne.where(tab_type: tab.to_s) %>
+          <% @q1s.each do |q1| %>
+            <div style="margin:20px 0;">
+              <%= link_to "<button type='button' class='btn custom_button' style='width:270px;'>#{q1.en}</button>".html_safe,
+                  controller: :ask, action: :index, q1_id: q1.id %>
+            </div>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>
