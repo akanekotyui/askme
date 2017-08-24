@@ -3,8 +3,10 @@ jp:
     models:
       question_part_one: 質問文1
       question_part_two: 質問文2
+      answer: 返答文
     attributes:
       question_part_one:
+        code: "関連コード"
         en: "English"
         jp: "日本語"
         zh: "简体中文"
@@ -17,3 +19,8 @@ jp:
         zh: "简体中文"
         remark: "備考"
         a_code: "返答文に関連コード"
+      answer:
+        code: "関連コード"
+        en: "English"
+        jp: "日本語"
+        zh: "简体中文"
