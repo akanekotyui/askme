@@ -22,7 +22,10 @@
 
       <li>予想される翻訳
         <p>
-          <%= @answer %>
+          <% @as = Answer.where(q2_code: ) %>
+          <% @as.each do |as| %>
+          <%= @as %>
+          <% end %>
         </p>
 
         <li>適した返答
@@ -30,10 +33,10 @@
           </p>
 
           <li>ワンポイントアドバイス
-          <p>
-            （～系統）で乗って、（～方面）へ行き、（降りるべき駅）で降りてください。	<br>
-            Take the (～系統) line going toward (～行き/～方面) and get off at (降りるべき駅).<br>
-          </p>
+            <p>
+              （～系統）で乗って、（～方面）へ行き、（降りるべき駅）で降りてください。	<br>
+              Take the (～系統) line going toward (～行き/～方面) and get off at (降りるべき駅).<br>
+            </p>
           </ul>
 
           </html>
