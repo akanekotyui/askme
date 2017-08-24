@@ -1,4 +1,4 @@
 class InfomationController < ApplicationController
-  def  infomation_index
+  def infomation_index
   end
 end
