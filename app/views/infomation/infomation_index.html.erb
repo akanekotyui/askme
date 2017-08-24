@@ -1,51 +1,41 @@
-<!DOCTYPE html>
-<html lang="ja">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap Sample</title>
-    <!-- BootstrapのCSS読み込み -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <!-- jQuery読み込み -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <!-- BootstrapのJS読み込み -->
-    <script src="js/bootstrap.min.js"></script>
-  </head>
-
-    <!-- 上のアイコンたち -->
-<!--  <div class="navbar-header">
+<nav class="navbar navbar-default">
+  <div class="navbar-header">
     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#gnavi">
       <span class="sr-only">メニュー</span>
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-  </div> -->
+  </div>
 
-  <body>
-    <h1>information</h1>
-    <p>There are tourist information centers in Kyoto</p>
+  <div id="gnavi" class="collapse navbar-collapse">
+    <ul class="nav navbar-nav">
+      <%= link_to "Home", root_path %>
+      <%= link_to "reply(test)", reply_index_path %>
+    </ul>
+  </div>
+</nav>
 
-    <ol>
-      <li>Kyoto Tourist Information Center</li>
-      <ul>
-        <li><strong>Hours</strong> 8:30 am ~ 7:00 pm</li>
-        <li><strong>TEL</strong> (+81)75-343-0548</li>
-        <li><strong>Access</strong> Located on 2F Kyoto Station Building, on the concourse</li>
-      </ul>
-      <li>Kyoto station tourist information center</li>
-      <ul>
-        <li><strong>Hours</strong> 8:30 am ~ 7:00 pm</li>
-        <li><strong>TEL</strong> (+81)75-343-0548</li>
-        <li><strong>Access</strong> Located on 2F Kyoto Station Building, on the concourse</li>
-      </ul>
-      <li>HANKYU Tourist Information Center, KYOTO</li>
-      <ul>
-        <li><strong>Hours</strong> 8:30 am ~ 7:00 pm</li>
-        <li><strong>TEL</strong> (+81)75-343-0548</li>
-        <li><strong>Access</strong> Located on 2F Kyoto Station Building, on the concourse</li>
-      </ul>
-    </ol>
-  </body>
-</html>
+<h1>information</h1>
+<p>There are tourist information centers in Kyoto</p>
+
+<ol>
+  <li>Kyoto Tourist Information Center</li>
+  <ul>
+    <li><strong>Hours</strong> 8:30 am ~ 7:00 pm</li>
+    <li><strong>TEL</strong> (+81)75-343-0548</li>
+    <li><strong>Access</strong> Located on 2F Kyoto Station Building, on the concourse</li>
+  </ul>
+  <li>Kyoto station tourist information center</li>
+  <ul>
+    <li><strong>Hours</strong> 7:30 am - 7:30 pm</li>
+    <li><strong>TEL</strong> (+81)75-371-4474</li>
+    <li><strong>Access</strong> 1min walk from JR kyoto station or city busterminal </li>
+  </ul>
+  <li>HANKYU Tourist Information Center, KYOTO</li>
+  <ul>
+    <li><strong>Hours</strong> 8:30 am - 5:00 pm</li>
+    <li><strong>TEL</strong> (+81)75-252-5507</li>
+    <li><strong>Access</strong> By the central gates at Hankyu Kawaramachi station.</li>
+  </ul>
+</ol>
