@@ -1,26 +1,55 @@
+<%= stylesheet_link_tag "kawaii", :media => "all" %>
+
 <h1>information</h1>
 <p>There are tourist information centers in Kyoto</p>
 
-<ol>
-  <li>Kyoto Tourist Information Center</li>
-  <ul>
-    <li><strong>Hours</strong> 8:30 am ~ 7:00 pm</li>
-    <li><strong>TEL</strong> (+81)75-343-0548</li>
-    <li><strong>Access</strong> Located on 2F Kyoto Station Building, on the concourse</li>
-  </ul>
-  <%= image_tag 'info_center_1.jpg' %>
-  <li>Kyoto station tourist information center</li>
-  <ul>
-    <li><strong>Hours</strong> 7:30 am - 7:30 pm</li>
-    <li><strong>TEL</strong> (+81)75-371-4474</li>
-    <li><strong>Access</strong> 1min walk from JR kyoto station or city busterminal </li>
-  </ul>
-  <%= image_tag 'info_center_2.jpg' %>
-  <li>HANKYU Tourist Information Center, KYOTO</li>
-  <ul>
-    <li><strong>Hours</strong> 8:30 am - 5:00 pm</li>
-    <li><strong>TEL</strong> (+81)75-252-5507</li>
-    <li><strong>Access</strong> By the central gates at Hankyu Kawaramachi station.</li>
-  </ul>
-  <%= image_tag 'info_center_3.jpg' %>
-</ol>
+<div class="column">①Kyoto Tourist Information Center</div>
+<table>
+  <tr>
+    <th class="column_item">Hour</th>
+    <th class="sub_colum_font">8:30 am ~ 7:00 pm</th>
+  </tr>
+  <tr>
+    <th class="column_item">TEL</th>
+    <th class="sub_colum_font">(+81)75-343-0548</th>
+  </tr>
+  <tr>
+    <th valign="middle" class="column_item">Access</th>
+    <th class="sub_colum_font">Located on 2F Kyoto Station Building, on the concourse</th>
+  </tr>
+</table>
+<div class="margin10"><%= image_tag 'info_center_1.jpg' %></div>
+
+<div class="column">②Kyoto station tourist information center</div>
+<table>
+  <tr>
+    <th class="column_item">Hour</th>
+    <th class="sub_colum_font">7:30 am - 7:30 pm</th>
+  </tr>
+  <tr>
+    <th class="column_item">TEL</th>
+    <th class="sub_colum_font">(+81)75-371-4474</th>
+  </tr>
+  <tr>
+    <th valign="middle" class="column_item">Access</th>
+    <th class="sub_colum_font">1min walk from JR kyoto station or city busterminal</th>
+  </tr>
+</table>
+<div class="margin10"><%= image_tag 'info_center_2.jpg' %></div>
+
+<li class="column">③HANKYU Tourist Information Center, KYOTO</li>
+<table>
+  <tr>
+    <th class="column_item">Hour</th>
+    <th class="sub_colum_font">8:30 am - 5:00 pm</th>
+  </tr>
+  <tr>
+    <th class="column_item">TEL</th>
+    <th class="sub_colum_font">(+81)75-252-5507</th>
+  </tr>
+  <tr>
+    <th valign="middle" class="column_item">Access</th>
+    <th class="sub_colum_font">By the central gates at Hankyu Kawaramachi station</th>
+  </tr>
+</table>
+<div class="margin10"><%= image_tag 'info_center_3.jpg' %></div>

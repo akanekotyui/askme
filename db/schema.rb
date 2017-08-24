@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(version: 20170824061423) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "code"
+    t.string "type"
     t.string "tab_type"
   end
 
