@@ -12,6 +12,7 @@ jp:
         zh: "简体中文"
         remark: "備考"
         q2_code: "質問文2に関連コード"
+        type: "タイプ"
       question_part_two:
         code: "関連コード"
         en: "English"
