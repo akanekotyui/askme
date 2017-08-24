@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong><%= QuestionPartOne.human_attribute_name(:code) %></strong>
+  <%= @answer.code %>
+</p>
+
+<p>
+  <strong><%= QuestionPartOne.human_attribute_name(:en) %></strong>
+  <%= @answer.en %>
+</p>
+
+<p>
+  <strong><%= QuestionPartOne.human_attribute_name(:jp) %></strong>
+  <%= @answer.jp %>
+</p>
+
+<p>
+  <strong><%= QuestionPartOne.human_attribute_name(:zh) %></strong>
+  <%= @answer.zh %>
+</p>
+
+<%= link_to 'Edit', edit_answer_path(@answer) %> |
+<%= link_to 'Back', answers_path %>
