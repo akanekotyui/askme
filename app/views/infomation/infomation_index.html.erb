@@ -1,21 +1,3 @@
-<nav class="navbar navbar-default">
-  <div class="navbar-header">
-    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#gnavi">
-      <span class="sr-only">メニュー</span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </button>
-  </div>
-
-  <div id="gnavi" class="collapse navbar-collapse">
-    <ul class="nav navbar-nav">
-      <%= link_to "Home", root_path %>
-      <%= link_to "reply(test)", reply_index_path %>
-    </ul>
-  </div>
-</nav>
-
 <h1>information</h1>
 <p>There are tourist information centers in Kyoto</p>
 
@@ -26,16 +8,19 @@
     <li><strong>TEL</strong> (+81)75-343-0548</li>
     <li><strong>Access</strong> Located on 2F Kyoto Station Building, on the concourse</li>
   </ul>
+  <%= image_tag 'info_center_1.jpg' %>
   <li>Kyoto station tourist information center</li>
   <ul>
     <li><strong>Hours</strong> 7:30 am - 7:30 pm</li>
     <li><strong>TEL</strong> (+81)75-371-4474</li>
     <li><strong>Access</strong> 1min walk from JR kyoto station or city busterminal </li>
   </ul>
+  <%= image_tag 'info_center_2.jpg' %>
   <li>HANKYU Tourist Information Center, KYOTO</li>
   <ul>
     <li><strong>Hours</strong> 8:30 am - 5:00 pm</li>
     <li><strong>TEL</strong> (+81)75-252-5507</li>
     <li><strong>Access</strong> By the central gates at Hankyu Kawaramachi station.</li>
   </ul>
+  <%= image_tag 'info_center_3.jpg' %>
 </ol>
