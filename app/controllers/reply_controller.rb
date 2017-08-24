@@ -1,10 +1,10 @@
 class ReplyController < ApplicationController
   def reply_index
-#firstはDBの一番上のデータをもってくるメソッド
-#入力からparamで値を渡す
-@reply = QuestionPartOne.first.en + QuestionPartOne.first.remark + QuestionPartTwo.first.en
-@answer = Answer.first.jp
+    #質問文からq2_codeとcodeをとってくる
+    q1 = QuestionPartOne.where(id: param[q1_id])
+    q2 = QuestionPartTwo.where(id: param[q2_id])
 
+    #
   end
 
 end
