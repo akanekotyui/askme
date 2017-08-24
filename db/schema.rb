@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(version: 20170824061423) do
     t.datetime "updated_at", null: false
     t.integer "code"
     t.string "tab_type"
+    t.string "type"
   end
 
   create_table "question_part_twos", force: :cascade do |t|

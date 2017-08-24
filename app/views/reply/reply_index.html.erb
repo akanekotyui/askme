@@ -1,22 +1,3 @@
-<!-- 固定のhead bar -->
-<nav class="navbar navbar-default">
-  <div class="navbar-header">
-    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#gnavi">
-      <span class="sr-only">メニュー</span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </button>
-  </div>
-
-  <div id="gnavi" class="collapse navbar-collapse">
-    <ul class="nav navbar-nav">
-      <%= link_to "infomation", infomation_index_path %>
-      <%= link_to "reply(test)", reply_index_path %>
-    </ul>
-  </div>
-</nav>
-
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -36,27 +17,16 @@
   <ul>
     <li>入力されたキーワード
       <p>
-          <tr>
-            <td><%= question_part_one.code %></td>
-            <td><%= question_part_one.en %></td>
-            <td><%= question_part_one.jp %></td>
-            <td><%= question_part_one.zh %></td>
-            <td><%= question_part_one.remark %></td>
-            <td><%= question_part_one.q2_code %></td>
-            <td><%= link_to 'Show', question_part_one %></td>
-            <td><%= link_to 'Edit', edit_question_part_one_path(question_part_one) %></td>
-            <td><%= link_to 'Destroy', question_part_one, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-          </tr>
-        <% end %>
+        <%= @reply %>
       </p>
 
       <li>予想される翻訳
         <p>
+          <%= @answer %>
         </p>
 
         <li>適した返答
           <p>
-            <%= @answer %>
           </p>
 
           <li>ワンポイントアドバイス
