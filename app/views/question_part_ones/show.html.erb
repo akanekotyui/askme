@@ -1,6 +1,11 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <strong><%= QuestionPartOne.human_attribute_name(:type) %></strong>
+  <%= @question_part_one.type %>
+</p>
+
+<p>
   <strong><%= QuestionPartOne.human_attribute_name(:code) %></strong>
   <%= @question_part_one.code %>
 </p>
