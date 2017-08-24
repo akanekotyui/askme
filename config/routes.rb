@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :advises
   resources :answers
   resources :question_part_twos
   resources :question_part_ones

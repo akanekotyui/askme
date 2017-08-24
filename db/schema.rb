@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170824061423) do
+ActiveRecord::Schema.define(version: 20170824102844) do
+
+  create_table "advises", force: :cascade do |t|
+    t.string "en"
+    t.string "jp"
+    t.string "zh"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "answers", force: :cascade do |t|
     t.integer "code"
@@ -30,7 +38,6 @@ ActiveRecord::Schema.define(version: 20170824061423) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "code"
-    t.string "type"
     t.string "tab_type"
   end
 
