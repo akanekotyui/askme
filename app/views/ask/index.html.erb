@@ -1,0 +1,33 @@
+<h1><%= ask = @q1.en.capitalize + " "+  @q1.remark.to_s.split("/")[0].to_s %>...</h1>
+<div align="center">
+  <div>
+    <% @q2s.each do |q2| %>
+    <div style="margin:20px 0;">
+      <button type="button" class="btn custom_button" style="width:270px;" data-toggle="modal" data-target="#confirm_<%= q2.id %>">
+        <%= q2.en %>
+      </button>
+    </div>
+    <div id="confirm_<%= q2.id %>" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Is this your questions:</h4>
+          </div>
+          <div class="modal-body">
+            <p><%= ask + " " + q2.en %>?</p>
+          </div>
+          <div class="modal-footer">
+            <%= link_to "<button type='button' class='btn btn-default'>Select Again</button>".html_safe, root_path %>
+            <%= link_to "<button type='button' class='btn btn-primary'>Yes</button>".html_safe,
+                controller: :reply, action: :reply_index, q1_id: @q1.id, q2_id: q2.id %> 
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
