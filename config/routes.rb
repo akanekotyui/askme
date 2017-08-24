@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   get  '/manage',           to: "manage#index"
   get  '/infomation_index', to: 'infomation#infomation_index'
   get  '/reply_index',      to: 'reply#reply_index'
+  get  '/ask/index/:q1_id', to: 'ask#index'
 end
