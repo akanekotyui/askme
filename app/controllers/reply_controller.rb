@@ -1,9 +1,10 @@
 class ReplyController < ApplicationController
   def reply_index
-    #これは文字列直打ち
-    @reply = 'how to get to' + 'Kinkakuji-temple'
-    @answer = '*goto行きの	（～系統）で乗って、（～方面）へ行き、（降りるべき駅）で降りてください。'
+    #質問文からq2_codeとcodeをとってくる
+    q1 = QuestionPartOne.where(id: param[q1_id])
+    q2 = QuestionPartTwo.where(id: param[q2_id])
 
+    #
   end
 
 end

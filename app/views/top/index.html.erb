@@ -1,5 +1,19 @@
-<div align="center"><h1>あすくみい</h1></div>
-<p>Please select your question!</p>
+<div align="center">
+  <font face="HG行書体" size="6">Welcome to </font>
+  <font face="HG行書体" size="6">Kyoto!</font>
+
+  <p>
+    <%= image_tag 'askme.png', :size => '200x130'%>
+  </p>
+
+  <font face="HG行書体" size="4">Communication tool</font>
+  <br/>
+</div>
+
+<br/>
+<br/>
+
+<font face="Script" size="4">Please select your question!</font><br />
 <section>
   <div>
     <ul class="nav nav-tabs" role="tablist">
@@ -13,7 +27,7 @@
         <a href="#others" class="custom_content" aria-controls="others" role="tab" data-toggle="tab">others</a>
       </li>
     </ul>
-
+<!-- タブ -->
     <div class="tab-content" align="center">
       <% [:place, :problems, :others].each do |tab| %>
         <div role="tabpanel" class="tab-pane <%= 'active' if tab == :place %>" id="<%= tab %>">
@@ -26,6 +40,7 @@
           <% end %>
         </div>
       <% end %>
+
     </div>
   </div>
 </section>

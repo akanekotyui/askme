@@ -1,22 +1,3 @@
-<!-- 固定のhead bar -->
-<nav class="navbar navbar-default">
-  <div class="navbar-header">
-    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#gnavi">
-      <span class="sr-only">メニュー</span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </button>
-  </div>
-
-  <div id="gnavi" class="collapse navbar-collapse">
-    <ul class="nav navbar-nav">
-      <%= link_to "infomation", infomation_index_path %>
-      <%= link_to "reply(test)", reply_index_path %>
-    </ul>
-  </div>
-</nav>
-
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -41,18 +22,21 @@
 
       <li>予想される翻訳
         <p>
+          <% @as = Answer.where(q2_code: ) %>
+          <% @as.each do |as| %>
+          <%= @as %>
+          <% end %>
         </p>
 
         <li>適した返答
           <p>
-            <%= @answer %>
           </p>
 
           <li>ワンポイントアドバイス
-          <p>
-            （～系統）で乗って、（～方面）へ行き、（降りるべき駅）で降りてください。	<br>
-            Take the (～系統) line going toward (～行き/～方面) and get off at (降りるべき駅).<br>
-          </p>
+            <p>
+              （～系統）で乗って、（～方面）へ行き、（降りるべき駅）で降りてください。	<br>
+              Take the (～系統) line going toward (～行き/～方面) and get off at (降りるべき駅).<br>
+            </p>
           </ul>
 
           </html>
