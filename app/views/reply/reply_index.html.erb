@@ -36,7 +36,18 @@
   <ul>
     <li>入力されたキーワード
       <p>
-        <%= @reply %>
+          <tr>
+            <td><%= question_part_one.code %></td>
+            <td><%= question_part_one.en %></td>
+            <td><%= question_part_one.jp %></td>
+            <td><%= question_part_one.zh %></td>
+            <td><%= question_part_one.remark %></td>
+            <td><%= question_part_one.q2_code %></td>
+            <td><%= link_to 'Show', question_part_one %></td>
+            <td><%= link_to 'Edit', edit_question_part_one_path(question_part_one) %></td>
+            <td><%= link_to 'Destroy', question_part_one, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
       </p>
 
       <li>予想される翻訳
