@@ -14,22 +14,33 @@
 </head>
 <body>
 
+  <!-- 質問文からq2_codeとcodeをとってくる
+　　　　params[:q2_id]に変える -->
+
+  <%  @q1 = QuestionPartOne.find(1) %>
+  <%  @q2 = QuestionPartTwo.find(1) %>
+  <%  @as = Answer.find(1) %>
+
+  <!-- a_codeをつくる -->
+
+<% as_id = 111 %>
+
+  <% @as = Answer.where(as_id: as_id) %>
+
   <ul>
-    <li>入力されたキーワード
+    <li>入力された質問文
       <p>
-        <%= @reply %>
+        <%= @q1.en + @q1.remark.to_s.split("/")[0].to_s +  @q2.en %>
       </p>
 
       <li>予想される翻訳
         <p>
-          <% @as = Answer.where(q2_code: ) %>
-          <% @as.each do |as| %>
-          <%= @as %>
-          <% end %>
+          <%= @q1.jp + @q2.jp %>
         </p>
 
         <li>適した返答
           <p>
+            <%= @as %>
           </p>
 
           <li>ワンポイントアドバイス
