@@ -38,3 +38,22 @@ table {
 .margin10 {
     margin: 20px;
 }
+
+.title {
+    position: relative;/*相対位置*/
+    padding: 0.5em 0.5em 0.5em 1.5em;/*アイコン分のスペース*/
+    line-height: 0.6;/*行高*/
+    color: #ff6a6a;/*文字色*/
+    border-bottom: solid 3px #ff6a6a;
+    position: relative;
+}
+
+.title:before{
+    font-family: FontAwesome;/*忘れずに*/
+    content: "\f05a";/*アイコンのユニコード*/
+    position: absolute;/*絶対位置*/
+    font-size: 1em;/*サイズ*/
+    left: 0.25em;/*アイコンの位置*/
+    top: 0.5em;/*アイコンの位置*/
+    color: #ff6a6a; /*アイコン色*/
+}
