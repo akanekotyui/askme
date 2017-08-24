@@ -5,6 +5,7 @@
 <table>
   <thead>
     <tr>
+      <th><%= QuestionPartOne.human_attribute_name(:code) %></th>
       <th><%= QuestionPartOne.human_attribute_name(:en) %></th>
       <th><%= QuestionPartOne.human_attribute_name(:jp) %></th>
       <th><%= QuestionPartOne.human_attribute_name(:zh) %></th>
@@ -17,6 +18,7 @@
   <tbody>
     <% @question_part_ones.each do |question_part_one| %>
       <tr>
+        <td><%= question_part_one.code %></td>
         <td><%= question_part_one.en %></td>
         <td><%= question_part_one.jp %></td>
         <td><%= question_part_one.zh %></td>
