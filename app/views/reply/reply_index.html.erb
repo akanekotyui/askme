@@ -5,12 +5,12 @@
 
 <div class="reply_column_2">翻訳</div>
 <h4 class="margin5">
-  <%= @a.tran.sub("（目的地）", @q2.jp.to_s) %>
+  <%= @a.tran.sub("（目的地）", @q2.jp.to_s).sub("（場所、もの）", @q2.jp.to_s) %>
 </h4>
 
 <div class="reply_column_3">返答の一例</div>
 <h4 class="margin5">
-  <%= @a.en %>
+  <%= @a.en.split("/")[0].to_s %>
 </h4>
 
 <div class="reply_column_4">このような表現も使いましょう</div>
