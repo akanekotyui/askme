@@ -27,7 +27,6 @@
         <a href="#others" class="custom_content" aria-controls="others" role="tab" data-toggle="tab">others</a>
       </li>
     </ul>
-<!-- タブ -->
     <div class="tab-content" align="center">
       <% [:place, :problems, :others].each do |tab| %>
         <div role="tabpanel" class="tab-pane <%= 'active' if tab == :place %>" id="<%= tab %>">

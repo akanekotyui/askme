@@ -1,6 +1,8 @@
 class ReplyController < ApplicationController
   def reply_index
-    @q1 = QuestionPartOne.where(id: params[:q1_id])
-    @q2 = QuestionPartTwo.where(id: params[:q2_id])
+    @q1 = QuestionPartOne.find(params[:q1_id])
+    @q2 = QuestionPartTwo.find(params[:q2_id])
+    answer_code = (@q1.code.to_s + @q2.code.to_s + @q2.a_code.to_s).to_i
+    @as = Answer.where(code: answer_code)
   end
 end

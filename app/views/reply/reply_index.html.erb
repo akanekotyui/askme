@@ -1,19 +1,19 @@
 <ul>
-  <li>入力されたキーワード
+  <li>入力された質問文
     <p>
-      <%= @reply %>
+      <%= @q1.en + @q1.remark.to_s.split("/")[0].to_s +  @q2.en %>
     </p>
 
   <li>予想される翻訳
     <p>
-      <% @as = Answer.where(code: 23) %>
-      <% @as.each do |a| %>
-        <%= @a %>
-      <% end %>
+      <%= @q1.jp + @q2.jp %>
     </p>
 
   <li>適した返答
     <p>
+      <% @as.each do |a| %>
+        <%= a.en %>
+      <% end %>
     </p>
 
   <li>ワンポイントアドバイス
