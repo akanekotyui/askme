@@ -24,7 +24,8 @@
               { controller: :top, action: :index, la: @la}, style:"color:#1e50a2;" if @la == "zh" %>
         </div>
         <div type="button" class="navbar-toggle" style="padding:5px 15px !important">
-          <%= link_to "<i class='fa fa-info fa-2x' aria-hidden='true'></i>".html_safe, infomation_index_path,style: "color:#1e50a2" %>
+          <%= link_to "<i class='fa fa-info fa-2x' aria-hidden='true'></i>".html_safe, infomation_index_path,style: "color:#1e50a2" if @la != "zh" %>
+          <%= link_to "<i class='fa fa-info fa-2x' aria-hidden='true'></i>".html_safe, {controller: :infomation, action: :infomation_index, la: @la },style: "color:#1e50a2" if @la == "zh" %>
         </div>
       </div>
     </nav>
