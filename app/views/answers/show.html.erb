@@ -20,5 +20,10 @@
   <%= @answer.zh %>
 </p>
 
+<p>
+  <strong><%= QuestionPartOne.human_attribute_name(:tran) %></strong>
+  <%= @answer.tran %>
+</p>
+
 <%= link_to 'Edit', edit_answer_path(@answer) %> |
 <%= link_to 'Back', answers_path %>
