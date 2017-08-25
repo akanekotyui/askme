@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170824103910) do
+ActiveRecord::Schema.define(version: 20170825013406) do
 
   create_table "advises", force: :cascade do |t|
     t.string "en"
@@ -25,6 +25,11 @@ ActiveRecord::Schema.define(version: 20170824103910) do
     t.string "en"
     t.string "jp"
     t.string "zh"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "dictionaries", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
