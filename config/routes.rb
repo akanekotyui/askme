@@ -10,5 +10,5 @@ Rails.application.routes.draw do
   get  '/infomation_index', to: 'infomation#infomation_index'
   get  '/reply_index',      to: 'reply#reply_index'
   get  '/ask/index/:q1_id', to: 'ask#index'
-  get  '/dictionary/index', to: 'dictionary#index'
+  get  '/dictionaris/index', to: 'dictionaries#index'
 end
