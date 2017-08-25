@@ -1,24 +1,20 @@
-<ul>
-  <li>入力された質問文
-    <p>
-      <%= @q1.en + @q1.remark.to_s.split("/")[0].to_s +  @q2.en %>
-    </p>
+<div class="reply_column_1">入力された英文</div>
+<h4 class="margin5">
+  <%= @q1.en + " " + @q1.remark.to_s.split("/")[0].to_s + " " +  @q2.en + @q2.remark.to_s.split("/")[0].to_s %>
+</h4>
 
-  <li>予想される翻訳
-    <p>
-      <%= @q1.jp + @q2.jp %>
-    </p>
+<div class="reply_column_2">翻訳</div>
+<h4 class="margin5">
+  <%= @q1.jp + @q2.jp %>
+</h4>
 
-  <li>適した返答
-    <p>
-      <% @as.each do |a| %>
-        <%= a.en %>
-      <% end %>
-    </p>
+<div class="reply_column_3">返答の一例</div>
+<h4 class="margin5">
+  <% @as.each do |a| %>
+    <%= a.en %>
+  <% end %>
+</h4>
 
-  <li>ワンポイントアドバイス
-    <p>
-      （～系統）で乗って、（～方面）へ行き、（降りるべき駅）で降りてください。	<br>
-      Take the (～系統) line going toward (～行き/～方面) and get off at (降りるべき駅).<br>
-    </p>
-</ul>
+</br>
+
+<div class="reply_column_4">このような表現も使いましょう</div>
