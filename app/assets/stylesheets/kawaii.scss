@@ -160,3 +160,15 @@ table {
   line-height: 1;
   letter-spacing: 0.05em;
 }
+.iframe-content {
+  position: relative;
+  width: 100%;
+  padding: 75% 0 0 0;
+}
+.iframe-content iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
