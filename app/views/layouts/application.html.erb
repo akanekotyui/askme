@@ -18,22 +18,25 @@
     <nav class="navbar navbar-default">
       <div class="navbar-header custom_header">
         <div class="navbar-toggle" style="padding:5px;float:left;margin-left:15px !important">
-          <%= link_to "<i class='fa fa-home fa-2x' aria-hidden='true'></i>".html_safe, root_path, style:"color:#1e50a2;" %>
+          <%= link_to "<i class='fa fa-home fa-2x' aria-hidden='true'></i>".html_safe,
+              { controller: :top, action: :index }, style:"color:#1e50a2;" if @la != "zh" %>
+          <%= link_to "<i class='fa fa-home fa-2x' aria-hidden='true'></i>".html_safe,
+              { controller: :top, action: :index, la: @la}, style:"color:#1e50a2;" if @la == "zh" %>
         </div>
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#gnavi" style="padding:5px !important">
-          <span style="color:#1e50a2"><i class="fa fa-bars fa-2x" aria-hidden="true"></i></span>
-        </button>
-      </div>
-
-      <div id="gnavi" class="collapse navbar-collapse">
-        <ul class="nav navbar-nav">
-          <%= link_to "Infomation", infomation_index_path %>
-          <%= link_to "Reply(test)", reply_index_path %>
-        </ul>
+        <div type="button" class="navbar-toggle" style="padding:5px 15px !important">
+          <%= link_to "<i class='fa fa-info fa-2x' aria-hidden='true'></i>".html_safe, infomation_index_path,style: "color:#1e50a2" if @la != "zh" %>
+          <%= link_to "<i class='fa fa-info fa-2x' aria-hidden='true'></i>".html_safe, {controller: :infomation, action: :infomation_index, la: @la },style: "color:#1e50a2" if @la == "zh" %>
+        </div>
       </div>
     </nav>
     <div class="container custom_content">
       <%= yield %>
     </div>
+    <footer style="position: fixed;height: 36px;bottom: 0;width: 100%;">
+      <div align="center" class="custom_content">
+        <%= link_to (image_tag "en.png", size: "30x30") + "<b>English</b>".html_safe, root_path %>
+        <%= link_to (image_tag "zh.png", size: "36x40") + "<b>简体中文</b>".html_safe, controller: :top, action: :index, la: "zh" %>
+      </div>
+    </footer>
   </body>
 </html>

@@ -1,7 +1,7 @@
 <button id="confirm_btn" type="button" class="btn" data-toggle="modal" data-target="#confirm" style="display:none;"></button>
-<div class="reply_column_1">入力された英文</div>
+<div class="reply_column_1">入力された中国語</div>
 <h4 class="margin5">
-  <%= @q1.en + " " + @q1.remark.to_s.split("/")[0].to_s + " " +  @q2.en + @q2.remark.to_s.split("/")[0].to_s %>
+  <%= @q2.zh + @q1.zh + @q1.remark.to_s.split("/")[1].to_s + @q2.remark.to_s.split("/")[1].to_s %>
 </h4>
 
 <div class="reply_column_2">翻訳</div>
@@ -11,13 +11,13 @@
 
 <div class="reply_column_3">返答の一例</div>
 <h4 class="margin5">
-  <%= @a.en %>
+  <%= @a.zh %>
 </h4>
 
 <div class="reply_column_4">このような表現も使いましょう</div>
 <h4 class="margin5">
   <% Advise.all.each do |ad| %>
     <%= ad.jp %><br>
-    <%= ad.en %><hr>
+    <%= ad.zh %><hr>
   <% end %>
 </h4>
