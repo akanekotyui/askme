@@ -1,24 +1,29 @@
-<ul>
-  <li>入力されたキーワード
-    <p>
-      <%= @reply %>
-    </p>
+<div class="reply_column_1">入力された英文</div>
+<h4 class="margin5">
+  How to get to Kinkakuji-temple?
+  <%#= @reply %>
+</h4>
 
-  <li>予想される翻訳
-    <p>
-      <% @as = Answer.where(code: 23) %>
-      <% @as.each do |a| %>
-        <%= @a %>
-      <% end %>
-    </p>
+<div class="reply_column_2">翻訳</div>
+<h4 class="margin5">
+  金閣寺にはどうやって行きますか？
+  <%# @as = Answer.where(q2_code: ) %>
+  <%# @as.each do |as| %>
+  <%#= @as %>
+  <%# end %>
+</h4>
 
-  <li>適した返答
-    <p>
-    </p>
+<div class="reply_column_3">返答の一例</div>
+<h4 class="margin5">
+  Take the XX line to YY, and get off ZZ.
+</h4>
 
-  <li>ワンポイントアドバイス
-    <p>
-      （～系統）で乗って、（～方面）へ行き、（降りるべき駅）で降りてください。	<br>
-      Take the (～系統) line going toward (～行き/～方面) and get off at (降りるべき駅).<br>
-    </p>
-</ul>
+</br>
+
+<div class="reply_column_4">このような表現も使いましょう</div>
+<h5>
+  （～系統）で乗って、（～方面）へ行き、（降りるべき駅）で降りてください。
+</h5>
+<h5>
+  Take the (～系統) line going toward (～行き/～方面) and get off at (降りるべき駅).<br>
+</h5>
