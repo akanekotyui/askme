@@ -1,50 +1,24 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Bootstrap Sample</title>
-  <!-- BootstrapのCSS読み込み -->
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <!-- jQuery読み込み -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <!-- BootstrapのJS読み込み -->
-  <script src="js/bootstrap.min.js"></script>
-</head>
-<body>
+<ul>
+  <li>入力された質問文
+    <p>
+      <%= @q1.en + @q1.remark.to_s.split("/")[0].to_s +  @q2.en %>
+    </p>
 
-  <!-- 質問文からq2_codeとcodeをとってくる
-　　　　params[:q2_id]に変える -->
+  <li>予想される翻訳
+    <p>
+      <%= @q1.jp + @q2.jp %>
+    </p>
 
-  <%  @q1 = QuestionPartOne.find(params[:q1_id]) %>
-  <%  @q2 = QuestionPartTwo.find(params[:q2_id]) %>
-  <%  @as = Answer.where(code: :q1 + code: :q2 +code: :q2) %>
+  <li>適した返答
+    <p>
+      <% @as.each do |a| %>
+        <%= a.en %>
+      <% end %>
+    </p>
 
-  <!-- a_codeをつくる -->
-  <% as_id = (@q1.to_s + @q2.to_s + @as.to_s)to_i %>
-
-  <ul>
-    <li>入力された質問文
-      <p>
-        <%= @q1.en + @q1.remark.to_s.split("/")[0].to_s +  @q2.en %>
-      </p>
-
-      <li>予想される翻訳
-        <p>
-          <%= @q1.jp + @q2.jp %>
-        </p>
-
-        <li>適した返答
-          <p>
-            <%= @as.en %>
-          </p>
-
-          <li>ワンポイントアドバイス
-            <p>
-              （～系統）で乗って、（～方面）へ行き、（降りるべき駅）で降りてください。	<br>
-              Take the (～系統) line going toward (～行き/～方面) and get off at (降りるべき駅).<br>
-            </p>
-          </ul>
-
-          </html>
+  <li>ワンポイントアドバイス
+    <p>
+      （～系統）で乗って、（～方面）へ行き、（降りるべき駅）で降りてください。	<br>
+      Take the (～系統) line going toward (～行き/～方面) and get off at (降りるべき駅).<br>
+    </p>
+</ul>
