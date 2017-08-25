@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>En:</strong>
+  <%= @advise.en %>
+</p>
+
+<p>
+  <strong>Jp:</strong>
+  <%= @advise.jp %>
+</p>
+
+<p>
+  <strong>Zh:</strong>
+  <%= @advise.zh %>
+</p>
+
+<%= link_to 'Edit', edit_advise_path(@advise) %> |
+<%= link_to 'Back', advises_path %>
