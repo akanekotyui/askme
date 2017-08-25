@@ -1,19 +1,63 @@
-<div align="center">
-  <font face="HG行書体" size="6">Welcome to </font>
-  <font face="HG行書体" size="6">Kyoto!</font>
 
+<div align="center">
   <p>
-    <%= image_tag 'askme.png', :size => '200x130'%>
+    <%= image_tag 'askme.png', :size => '200x130', :id => 'logo'%>
+    <%= image_tag 'welcome.png', :size => '200x130', :id => 'welcome' %>
   </p>
 
   <font face="HG行書体" size="4">Communication tool</font>
   <br/>
 </div>
 
+
+
+<br/>
+<br/><!-- Button trigger modal -->
+<div align="center">
+  <img src="/assets/kyoto.png" width="55" height="60" class="right-sakura">
+  <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#myModal">
+    最初にお読みください
+  </button>
+  <img src="/assets/kyoto.png" width="55" height="60" class="left-sakura">
+</div>
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">
+          <div align="center">
+            使い方
+          </div>
+        </h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        まずは落ち着きましょう。深呼吸して！<br/>
+        今から相手にスマホを渡し、相手に質問文を作ってもらいます。<br/>
+        その後相手からスマホを返してもらいます。<br/>
+        スマホには返答文の例文が表示されているので、
+        例文を参考にして相手に教えてあげましょう。<br/>
+        では、相手にスマホを見せながら以下のように言ってください。<br/>
+        Sorry, I can't catch English.<br/> 
+        Please tell me your question by tapping on the smartphone.<br/>
+        (スマホを渡してください)<br/>
+        Here you are!<br/>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">閉じる</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <br/>
 <br/>
 
-<font face="Script" size="4">Please select your question!</font><br />
+<div class="select_tab_column">Please select your question!</div>
+
 <section>
   <div>
     <ul class="nav nav-tabs" role="tablist">
