@@ -195,3 +195,18 @@ table {
   line-height: 1;
   letter-spacing: 0.05em;
 }
+
+#welcome {
+    margin-top: -50px;
+    margin-left: -200px;
+}
+
+.left-sakura{
+    transform: scale(-1, 1);
+    left: 10px;
+}
+
+.right-sakura{
+    transform: scale(1, 1);
+    right: 10px;
+}
