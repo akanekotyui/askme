@@ -1,0 +1,17 @@
+<button id="confirm_btn" type="button" class="btn" data-toggle="modal" data-target="#confirm" style="display:none;"></button>
+<div class="reply_column_1">入力された中国語</div>
+<h4 class="margin5">
+  <%= @q2.zh + @q1.zh + @q1.remark.to_s.split("/")[1].to_s + @q2.remark.to_s.split("/")[1].to_s %>
+</h4>
+
+<div class="reply_column_2">翻訳</div>
+<h4 class="margin5">
+  <%= @a.tran.sub(/（.*）/, @q2.jp.to_s) %>
+</h4>
+
+<div class="reply_column_3">返答の一例</div>
+<h4 class="margin5">
+  <%= @a.zh %>
+</h4>
+
+<div class="reply_column_4">このような表現も使いましょう</div>

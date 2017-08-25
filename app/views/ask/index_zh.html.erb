@@ -14,18 +14,35 @@
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title">Is this your questions:</h4>
+            <h4 class="modal-title">您的问题是这样吗?</h4>
           </div>
           <div class="modal-body">
-            <p><%= ask + " " + q2.zh %>?</p>
+            <p><%= q2.zh + ask %>?</p>
           </div>
           <div class="modal-footer">
-            <%= link_to "<button type='button' class='btn btn-default'>Select Again</button>".html_safe, root_path %>
-            <%= link_to "<button type='button' class='btn btn-primary'>Yes</button>".html_safe,
-                controller: :reply, action: :reply_index, q1_id: @q1.id, q2_id: q2.id %> 
+            <%= link_to "<button type='button' class='btn btn-default'>重新选择</button>".html_safe, root_path(la: "zh") %>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#confirm_<%= q2.id %>_two">是的</button>
           </div>
         </div>
 
+      </div>
+    </div>
+    <div id="confirm_<%= q2.id %>_two" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">消息:</h4>
+          </div>
+          <div class="modal-body">
+            <p>请归还手机.</p>
+          </div>
+          <div class="modal-footer">
+            <%= link_to "<button type='button' class='btn btn-primary'>確定</button>".html_safe,
+                controller: :reply, action: :reply_index, q1_id: @q1.id, q2_id: q2.id, la: "zh" %> 
+          </div>
+        </div>
       </div>
     </div>
     <% end %>
